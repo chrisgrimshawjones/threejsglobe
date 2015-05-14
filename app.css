@@ -1,0 +1,14 @@
+body{
+	margin:0;
+}
+
+#globe{
+	background:url('images/spaceman.jpg') no-repeat center top scroll;
+	background-size: 100% auto;
+	height:2000px;
+}
+
+#globe canvas{
+	display: block;
+	margin:0 auto;
+}
