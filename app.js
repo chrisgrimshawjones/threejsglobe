@@ -38,7 +38,7 @@ scene.add( light )
 camera.position.z = 1;
 
 // wrap the sphere in an image of the earth
-material.map = THREE.ImageUtils.loadTexture('images/earthmap10k.jpg');
+material.map = THREE.ImageUtils.loadTexture('images/earthspec10k.jpg');
 
 //add some textures (another image layer)
 // material.bumpMap    = THREE.ImageUtils.loadTexture('images/earthbump1k.jpg');
@@ -106,17 +106,17 @@ var material	= new THREE.MeshPhongMaterial({
 	opacity		: 0.8,
 })
 
-var mesh = new THREE.Mesh(geometry, material);
+var clouds = new THREE.Mesh(geometry, material);
 
-scene.add( mesh );
+scene.add( clouds );
 
 var render = function () {
 	requestAnimationFrame( render );
 
 	//globe.rotation.x += 0.0;
 	globe.rotation.y += 0.001;
-		mesh.rotation.x += 0.0001;
-	mesh.rotation.y += 0.001;
+	clouds.rotation.x += 0.0001;
+	clouds.rotation.y += 0.001;
 
 	renderer.render(scene, camera);
 };
